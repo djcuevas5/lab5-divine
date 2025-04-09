@@ -11,6 +11,12 @@ body{
     line-height: 1.5;
 }
 
+html, body {
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+}
+
 .container{
     width: 90%;
     margin: 0 auto;
@@ -24,7 +30,7 @@ body{
 }
 
 .top-banner{
-    background-color: #0071ce;
+    background-color: #005b8a;
     color:white;
     padding: 10px 0;
     display: flex;
@@ -68,6 +74,22 @@ body{
     height: 20px;
     margin-right: 8px;
   }
+
+  /* Search Bar */
+  .search {
+    flex: 1;
+    max-width: 500px;
+    margin: 0 20px;
+  }
+
+  .search-bar{
+    width:100%;
+    padding: 12px 16px;
+    font-size: 1rem;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    font-family: 'Inter', sans-serif;
+  }
   
   /* Cart Section */
   .cart-section {
@@ -99,13 +121,13 @@ body{
   }
   
   .item-info h2 {
-    font-size: 1.5rem;
+    font-size: 1.0rem;
     margin-bottom: 8px;
   }
   
   .item-info p {
-    font-size: 1.2rem;
-    color: #0071ce;
+    font-size: 1.1rem;
+    color: #005b8a;
   }
   
   .item-controls {
@@ -138,12 +160,18 @@ body{
   }
   
   .cart-summary {
-    position: absolute;
-    bottom: 1px;
-    right:20px;
-    padding: 5px;
+    margin-top: 5px;
+    padding: 10px 20px;
     border-radius: 10px;
+    background-color: #f8f8f8;
+    float: right;
     box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1);
+  }
+
+  .checkout-wrapper{
+    justify-content: flex-end;
+    margin: 20px 5%;
+    padding-left: 20px;
   }
   
   .cart-summary p {
@@ -152,14 +180,17 @@ body{
     font-size: 16px;
   }
   
-  .checkout-btn {
-    background-color: #0071ce;
-    color: white;
-    padding: 12px 20px;
+  .checkout-button {
+    background-color: #ffc220; 
+    color: #000000;
+    font-size: 1.1rem;
+    font-weight: bold;
+    padding: 14px 32px;
     border: none;
-    border-radius: 5px;
-    font-size: 1.2rem;
     cursor: pointer;
+    transition: background-color 0.3s ease;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+
   }
   
   .checkout-btn:hover {
@@ -168,12 +199,13 @@ body{
   
   /* Footer */
   .site-footer {
-    background-color: #0071ce;
+    background-color: #005b8a;
     color: white;
     padding: 20px ;
     text-align: center;
     margin-top: 20px;
     position:relative;
+    
   }
   
   .site-footer p {
